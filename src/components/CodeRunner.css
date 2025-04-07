@@ -1,0 +1,16 @@
+.code-runner {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .code-textarea {
+    width: 100%;
+    font-family: monospace;
+    margin-bottom: 1rem;
+  }
+  
+  .output-box {
+    background: #f4f4f4;
+    padding: 1rem;
+  }
+    
