@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import './CodeRunner.css';
+import {addXP} from '../utils/storage';
+import '../data/challenges';
 
 
-const CodeRunner = () => {
+const CodeRunner = ({ challenge }) => {
 
-    const [code, setCode] = useState(`print('Hello World')`);
+    const [code, setCode] = useState(challenge.starterCode);
     const [output, setOutput] = useState("");
     const [status, setStatus] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -28,9 +30,9 @@ const CodeRunner = () => {
                 "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
             },
             body: JSON.stringify({
-                language_id: 71,
+                language_id: challenge.language_id,
                 source_code: encodedCode,
-                expected_output: btoa("Hello World\n"),
+                expected_output: btoa(challenge.expectedOutput),
             }),
         });
 
@@ -39,13 +41,20 @@ const CodeRunner = () => {
         setStatus(result.status?.description || "Unknown");
         setLoading(false);
 
+        if (result.status?.id === 3) {
+
+          const updatedProgress = addXP(100);
+          alert(`Challenge passed! +100 XP - You are level ${updatedProgress.level}`);
+
+        }
+
     };
 
 
     return (
         <div className='code-runner'>
           <h2>Coding Challenge</h2>
-          <p><strong>Challenge:</strong> Write a program that prints "Hello World"</p>
+          <p><strong>Challenge:</strong> {challenge.prompt}</p>
     
           <textarea className='code-textarea'
             value={code}
