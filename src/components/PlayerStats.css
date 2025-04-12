@@ -1,0 +1,14 @@
+.player-stats {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: monospace;
+    text-align: right;
+    z-index: 10;
+  }
+  
