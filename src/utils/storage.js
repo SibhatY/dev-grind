@@ -2,7 +2,7 @@ const STORAGE_KEY = "playerProgress";
 
 export const loadProgress = () => {
   const data = localStorage.getItem(STORAGE_KEY);
-  return data ? JSON.parse(data) : { xp: 0, level: 1 };
+  return data ? JSON.parse(data) : { xp: 0, level: 1, rank: "E", rankProgress: [] };
 };
 
 export const saveProgress = (progress) => {
