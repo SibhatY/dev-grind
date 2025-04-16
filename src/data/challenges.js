@@ -1,21 +1,84 @@
 const challenges = [
-    {
-      id: 1,
-      prompt: "Write a function that prints 'Hello World'",
-      starterCode: "print('Hello World')",
-      expectedOutput: "Hello World\n",
-      language_id: 71,
-      difficulty: "Easy",
-    },
-    {
-      id: 2,
-      prompt: "Return the reverse of the string 'hello'",
-      starterCode: "print('olleh')",
-      expectedOutput: "olleh\n",
-      language_id: 71,
-      difficulty: "Easy",
-    },
-  ];
-  
-  export default challenges;
-  
+  {
+    id: 1,
+    name: "Hello World",
+    prompt: "Write a function that prints 'Hello World'",
+    starterCode: "print('Hello World')",
+    expectedOutput: "Hello World\n",
+    language_id: 71,
+    difficulty: "Easy",
+    requiredLevel: 1,
+    requiredRank: "E",
+    type: "normal",
+    theme: "basic"
+  },
+  {
+    id: 2,
+    name: "Reverse String",
+    prompt: "Return the reverse of the string 'hello'",
+    starterCode: "print('olleh')",
+    expectedOutput: "olleh\n",
+    language_id: 71,
+    difficulty: "Easy",
+    requiredLevel: 1,
+    requiredRank: "E",
+    type: "normal",
+    theme: "basic"
+  },
+  {
+    id: 3,
+    name: "Trial of Ascension",
+    prompt: "Complete this trial to unlock Rank D.",
+    starterCode: "print('trial complete')",
+    expectedOutput: "trial complete\n",
+    language_id: 71,
+    difficulty: "Medium",
+    requiredLevel: 2,
+    requiredRank: "E",
+    type: "rankTrial",
+    theme: "trial"
+  },
+//Rank D starting here
+  {
+    id: 4,
+    name: "Sum of Two Numbers",
+    prompt: "Write a function that prints the sum of 7 and 5.",
+    starterCode: "print(7 + 5)",
+    expectedOutput: "12\n",
+    language_id: 71,
+    difficulty: "Easy",
+    requiredLevel: 3,
+    requiredRank: "D",
+    type: "normal",
+    theme: "math",
+  },
+  {
+    id: 5,
+    name: "Even or Odd",
+    prompt: "Print 'Even' if 42 is even, else print 'Odd'.",
+    starterCode: "print('Even' if 42 % 2 == 0 else 'Odd')",
+    expectedOutput: "Even\n",
+    language_id: 71,
+    difficulty: "Medium",
+    requiredLevel: 4,
+    requiredRank: "D",
+    type: "normal",
+    theme: "logic",
+  },
+  {
+    id: 6,
+    name: "Trial of Logic",
+    prompt: "Print 'Rank C unlocked' to complete this Rank D trial.",
+    starterCode: "print('Rank C unlocked')",
+    expectedOutput: "Rank C unlocked\n",
+    language_id: 71,
+    difficulty: "Hard",
+    requiredLevel: 5,
+    requiredRank: "D",
+    type: "rankTrial",
+    theme: "trial",
+  },
+
+];
+
+export default challenges;
