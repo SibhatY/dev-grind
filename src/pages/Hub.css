@@ -1,0 +1,54 @@
+/* src/pages/Hub.css */
+.haven-container {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #1a1c1e, #2a2d31);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    color: #eaeaea;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .haven-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #d8d3ca;
+  }
+  
+  .haven-subtitle {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 2.5rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .portal-button {
+    background-color: #a891ff;
+    color: #0f0f0f;
+    padding: 0.75rem 2rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 240px;
+  }
+  
+  .portal-button:hover {
+    background-color: #8f7ff5;
+  }
+  
+  .codex-badge {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #bbb;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Inter', sans-serif;
+  }
+  
